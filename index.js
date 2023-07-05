@@ -6,13 +6,13 @@ import cors from "cors";
 // Get env variables
 dotenv.config();
 
-// import database from "./app/database/index.js";
-// import routes from "./app/routes/index.js"; // Import API routes
+import database from "./app/database/index.js";
+//import routes from "./app/routes/index.js"; // Import API routes
 
-// Establish database connection
-// (async () => {
-//     await database();
-// })();
+//Establish database connection
+(async () => {
+    await database();
+})();
 
 // Create express instance
 const app = express();
@@ -57,4 +57,3 @@ app.listen(port, () => {
     console.log(`apirestfull-nodejs NodeJS API listening on port ${port}`);
     console.log(`---> http://${process.env.NODE_APP_HOST}:${port}`);
 });
- //npm install dotenv
