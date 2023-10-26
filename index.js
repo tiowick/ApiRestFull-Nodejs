@@ -9,7 +9,7 @@ dotenv.config();
 import database from "./app/database/index.js";
 import routes from "./app/routes/index.js"; // Import API routes
 
-//Establish database connection
+// Establish database connection
 (async () => {
     await database();
 })();
@@ -54,6 +54,6 @@ app.use(function (error, req, response, next) {
 const port = process.env.NODE_LOCAL_PORT || 3001;
 app.listen(port, () => {
     // eslint-disable-next-line no-console
-    console.log(`apirestfull-nodejs NodeJS API listening on port ${port}`);
+    console.log(`ToDoSimple NodeJS API listening on port ${port}`);
     console.log(`---> http://${process.env.NODE_APP_HOST}:${port}`);
 });
